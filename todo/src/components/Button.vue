@@ -1,5 +1,5 @@
 <template>
-	<button :style="variables">{{ text }}</button>
+	<button @click="onClick()" :style="variables">{{ text }}</button>
 </template>
 
 <script>
@@ -10,11 +10,11 @@
 				type: String,
 				default: "Default Value",
 			},
-			"bg-color": {
+			bgColor: {
 				type: String,
 				default: "#ff85ff",
 			},
-			"text-color": {
+			textColor: {
 				type: String,
 				default: "#091f2c",
 			},
@@ -32,12 +32,17 @@
 				return {
 					"--w": this.w,
 					"--h": this.h,
-					"--bg-color": this["bg-color"],
-					"--text-color": this["text-color"],
+					"--bg-color": this.bgColor,
+					"--text-color": this.textColor,
 				};
 			},
 		},
-		methods: {},
+		methods: {
+			onClick() {
+				console.log("Clicked");
+				return;
+			}
+		},
 		components: {},
 	};
 </script>
@@ -52,9 +57,17 @@
 		outline: 0px;
 		border: 0px;
 		cursor: pointer;
+		font-family: Roboto Mono, monospace;
+		font-size: 16px;
+		font-weight: bold;
+		border-radius: 10px;
 
+		margin-right: 100px;
+
+		transition: all 0.1s ease-in-out;
 	}
 
 	button:hover {
+		filter: brightness(90%);
 	}
 </style>

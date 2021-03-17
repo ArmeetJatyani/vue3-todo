@@ -25,7 +25,7 @@
 	}
 
 	h1 {
-        
+		margin-left: 100px;
 		letter-spacing: 5px;
 	}
 </style>

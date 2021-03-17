@@ -1,7 +1,5 @@
 <template>
-	<div class="container">
-		<Header />
-	</div>
+	<Header />
 </template>
 
 <script>
@@ -16,14 +14,27 @@
 </script>
 
 <style>
-	@tailwind base;
-	@tailwind components;
-	@tailwind utilities;
+	:root {
+		/* @import url("./css/variables.css"); */
+    
+    /** COLORS */
+		--bg-color: #091f2c;
+		--primary-color: #ff85ff;
+		--secondary-color: #ff6fff;
 
-	#app {
+		/** FONTS */
 		--monospaced-font: Roboto Mono, monospace;
 		--main-font: Roboto, Arial, Helvetica, sans-serif;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
+
+		background: var(--bg-color);
+		color: var(--primary-color);
+
+		margin: 0px;
+		padding: 0px;
+	}
+
+	#app {
 	}
 </style>
